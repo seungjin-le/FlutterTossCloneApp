@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+
+class PaymentFragment extends StatefulWidget {
+  const PaymentFragment({Key? key}) : super(key: key);
+
+  @override
+  State<PaymentFragment> createState() => PaymentFragmentState();
+}
+
+class PaymentFragmentState extends State<PaymentFragment> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: const Center(
+        child: Text('혜택'),
+      ),
+    );   
+  }
+}

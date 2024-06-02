@@ -14,7 +14,7 @@ extension SnackbarContextExtension on BuildContext {
   ///Scaffold안에 빨간 Snackbar를 보여줍니다.
   void showErrorSnackbar(
     String message, {
-    Color bgColor = AppColors.salmon,
+    Color bgColor = AppColors.screenBgColor,
     double bottomMargin = 0,
   }) {
     _showSnackBarWithContext(
@@ -74,7 +74,7 @@ class _SnackbarFactory {
   }
 
   static SnackBar createErrorSnackBar(BuildContext context, String? message,
-      {Color bgColor = AppColors.salmon, double bottomMargin = 0}) {
+      {Color bgColor = AppColors.screenBgColor, double bottomMargin = 0}) {
     return SnackBar(
         elevation: 0,
         behavior: SnackBarBehavior.fixed,

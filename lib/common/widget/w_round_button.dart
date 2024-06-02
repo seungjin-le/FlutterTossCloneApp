@@ -112,9 +112,9 @@ class RoundButtonState extends State<RoundButton> with RefreshEverySecond {
       switch (widget.theme) {
         case RoundButtonTheme.blink:
           final index = colorIndex % 2;
-          color = index == 0 ? AppColors.green : AppColors.salmon;
+          color = AppColors.screenBgColor;
           currentTextColor = Colors.white;
-          borderColor = index == 0 ? AppColors.green : AppColors.salmon;
+          borderColor = index == 0 ? AppColors.green : AppColors.screenBgColor;
           shadowColor = Colors.transparent;
           break;
         default:

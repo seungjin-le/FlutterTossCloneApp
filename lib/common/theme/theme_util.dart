@@ -18,10 +18,10 @@ class ThemeUtil {
     final theme = context.themeType;
     switch (theme) {
       case CustomTheme.dark:
-        changeTheme(context, CustomTheme.light);
+        changeTheme(context, CustomTheme.dark);
         break;
       case CustomTheme.light:
-        changeTheme(context, CustomTheme.dark);
+        changeTheme(context, CustomTheme.light);
         break;
     }
   }

@@ -2,9 +2,8 @@ import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/screen/main/tab/all/f_all.dart';
 import 'package:fast_app_base/screen/main/tab/benefit/f_benefit.dart';
 import 'package:fast_app_base/screen/main/tab/home/f_home.dart';
-import 'package:fast_app_base/screen/main/tab/stock/f_stock.dart';
 import 'package:fast_app_base/screen/main/tab/payment/f_payment_dart';
-
+import 'package:fast_app_base/screen/main/tab/stock/f_stock.dart';
 import 'package:flutter/material.dart';
 
 enum TabItem {

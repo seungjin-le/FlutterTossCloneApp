@@ -9,42 +9,48 @@ class TossAppBar extends StatefulWidget {
 }
 
 class _TossAppBarState extends State<TossAppBar> {
-  bool _showRedDot = false;
+  late bool _showRedDot = false;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 60,
-      color: context.appColors.appBarBackgoundColor,
+      color: context.appColors.appBarBackgroundColor,
       child: Row(
         children: [
           width10,
-          Image.asset("$bankLogoPath/tossBankLogo.jpeg", height: 30),
+          Image.asset("$bankLogoPath/tossBankLogo.png", height: 30),
           const Text('Toss',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
-          Spacer(),
-          Icon(Icons.mood, color: Colors.white, size: 30),
+          const Spacer(),
+          const Icon(Icons.mood, color: Colors.white, size: 30),
           width10,
-          Stack(
-            children: [
-              const Icon(Icons.notifications, color: Colors.white, size: 30),
-              if (_showRedDot)
-                Positioned.fill(
-                  child: Align(
-                    alignment: Alignment.topRight,
+          Tap(
+            onTap: () {
+              setState(() {
+                _showRedDot = !_showRedDot;
+              });
+            },
+            child: Stack(
+              children: [
+                const Icon(Icons.notifications, color: Colors.white, size: 30),
+                if (_showRedDot)
+                  Positioned(
+                    right: 0,
+                    top: 0,
                     child: Container(
-                      width: 6,
-                      height: 6,
+                      width: 10,
+                      height: 10,
                       decoration: const BoxDecoration(
                         color: Colors.red,
                         shape: BoxShape.circle,
                       ),
                     ),
                   ),
-                ),
-            ],
+              ],
+            ),
           ),
           width10,
         ],

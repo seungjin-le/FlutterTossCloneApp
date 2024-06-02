@@ -1,5 +1,4 @@
 import 'package:fast_app_base/common/common.dart';
-import 'package:fast_app_base/common/widget/w_round_button.dart';
 import 'package:fast_app_base/screen/dialog/d_message.dart';
 import 'package:fast_app_base/screen/main/tab/home/w_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -15,16 +14,15 @@ class HomeFragment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: context.appColors.seedColor.getMaterialColorValues[100],
-        child: Container(
-            child: const Stack(
+        color: Colors.black,
+        child: const Stack(
           children: [
             SingleChildScrollView(
               child: Column(),
             ),
             TossAppBar(),
           ],
-        )));
+        ));
   }
 
   void showSnackbar(BuildContext context) {
